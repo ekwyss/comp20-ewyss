@@ -1,6 +1,7 @@
 @media screen and (min-device-width: 1201px) {
     .software {
-	width:128px; hieght:240px; background:url(software.png) 0 0px;
+	width:128px; hieght:240px; background:<img src="software.png"
+            alt="software.png"> 0 0px;
     }
 }
 
@@ -36,7 +37,8 @@
 
 @media screen and (min-device-width: 601px) and (max-device-width: 700px;) {
     .software {
-	width:128px; hieght:240px; background:url(software.png) 128 240px;
+	width:128px; hieght:240px; background:<img src="software.png"
+            alt="software.png" 128 240px;
     }
 }
 
