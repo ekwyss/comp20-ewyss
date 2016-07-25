@@ -2,3 +2,8 @@ body {
     text-align: center;
     background-color: Tan;
 }
+
+h1 {
+    font-size: 36px;
+    font-style: italic;
+}
