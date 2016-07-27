@@ -222,4 +222,117 @@
 	 strokeWeight: 2,
 	 map: map
      });
+
+     var infowindow = new google.maps.InfoWindow();
+
+     South_Station.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     Andrew.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     Porter_Square.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     Harvard_Square.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     JFK_UMASS.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+    Savin_Hill.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     Park_Street.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     Broadway.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     North_Quincy.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     Shawmut.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     Davis.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     Alewife.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     Kendall_MIT.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     Charles_MGH.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     Downtown_Crossing.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     Quincy_Center.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     Quincy_Adams.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     Ashmont.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+     
+     Wollaston.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     Fields_Corner.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     Central_Square.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+
+     Braintree.addListener('click', function() {
+	 infowindow.setContent(this.title);
+	 infowindow.open(map, this);
+     });
+     
  }
