@@ -1,0 +1,225 @@
+ function init()
+ {
+     var center = new google.maps.LatLng(42.352271, -71.0552420000001);
+    
+     var myOptions = {
+	 zoom: 13,
+	 center: center,
+	 mapTypeId: google.maps.MapTypeId.ROADMAP
+     };
+
+     var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+     var image = 'subway.jpg';
+     
+     var South_Station = new google.maps.Marker({
+	 position: center,
+	 map: map,
+	 icon: image,
+	 title: "South Station"
+     })
+
+     var Andrew = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.330154, -71.057655),
+	 map: map,
+	 icon: image,
+	 title: "Andrew"
+     })
+
+     var Porter_Square = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.3884, -71.11914899999999),
+	 map: map,
+	 icon: image,
+	 title: "Porter Square"
+     })
+
+     var Harvard_Square = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.373362, -71.118956),
+	 map: map,
+	 icon: image,
+	 title: "Havard Square"
+     })
+
+     var JFK_UMASS = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.320685, -71.052391),
+	 map: map,
+	 icon: image,
+	 title: "JFK/UMASS"
+     })
+
+     var Savin_Hill = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.31129, -71.053331),
+	 map: map,
+	 icon: image,
+	 title: "Savin Hill"
+     })
+
+     var Park_Street = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.35639457, -71.0624242),
+	 map: map,
+	 icon: image,
+	 title: "Park Street"
+     })
+
+     var Broadway = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.342622, -71.056967),
+	 map: map,
+	 icon: image,
+	 title: "Broadway"
+     })
+
+     var North_Quincy = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.275275, -71.029583),
+	 map: map,
+	 icon: image,
+	 title: "North Quincy"
+     })
+
+     var Shawmut = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.29312583, -71.06573796000001),
+	 map: map,
+	 icon: image,
+	 title: "Shawmut"
+     })
+
+     var Davis = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.39674, -71.121815),
+	 map: map,
+	 icon: image,
+	 title: "Davis"
+     })
+
+     var Alewife = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.395428, -71.142483),
+	 map: map,
+	 icon: image,
+	 title: "Alewife"
+     })
+
+     var Kendall_MIT = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.36249079, -71.08617653),
+	 map: map,
+	 icon: image,
+	 title: "Kendall/MIT"
+     })
+
+     var Charles_MGH = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.361166, -71.070628),
+	 map: map,
+	 icon: image,
+	 title: "Charles/MGH"
+     })
+
+     var Downtown_Crossing = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.355518, -71.060225),
+	 map: map,
+	 icon: image,
+	 title: "Downtown Crossing"
+     })
+
+     var Quincy_Center = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.251809, -71.005409),
+	 map: map,
+	 icon: image,
+	 title: "Quincy Center"
+     })
+
+     var Quincy_Adams = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.233391, -71.007153),
+	 map: map,
+	 icon: image,
+	 title: "Quincy Adams"
+     })
+
+     var Ashmont = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.284652, -71.06448899999999),
+	 map: map,
+	 icon: image,
+	 title: "Ashmont"
+     })
+
+     var Wollaston  = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.2665139, -71.0203369),
+	 map: map,
+	 icon: image,
+	 title: "Wollaston"
+     })
+
+     var Fields_Corner = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.300093, -71.061667),
+	 map: map,
+	 icon: image,
+	 title: "Fields Corner"
+     })
+
+     var Central_Square = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.365486, -71.103802),
+	 map: map,
+	 icon: image,
+	 title: "Central Square"
+     })
+
+     var Braintree = new google.maps.Marker({
+	 position: new google.maps.LatLng(42.2078543, -71.0011385),
+	 map: map,
+	 icon: image,
+	 title: "Braintree"
+     })
+
+     var AlewifeToJFKCoordinates = [
+	 Alewife.position,
+	 Davis.position,
+	 Porter_Square.position,
+	 Harvard_Square.position,
+	 Central_Square.position,
+	 Kendall_MIT.position,
+	 Charles_MGH.position,
+	 Park_Street.position,
+	 Downtown_Crossing.position,
+	 South_Station.position,
+	 Broadway.position,
+	 Andrew.position,
+	 JFK_UMASS.position
+     ];
+
+     var AlewifeToJFK = new google.maps.Polyline({
+	 path: AlewifeToJFKCoordinates,
+	 strokeColor: 'red',
+	 strokeOpacity: 1.0,
+	 strokeWeight: 2,
+	 map: map
+     });
+
+     var JFKToAshmontCoordinates = [
+	 JFK_UMASS.position,
+	 Savin_Hill.position,
+	 Fields.position,
+	 Shawmut.position,
+	 Ashmont.position
+     ];
+
+     var JFKToAshmont = new google.maps.Polyline({
+	 path: JFKToAshmontCoordinates,
+	 strokeColor: 'red',
+	 strokeOpacity: 1.0,
+	 strokeWeight: 2,
+	 map: map
+     });
+
+     var JFKToBraintreeCoordinates = [
+	 JFK_UMASS.position,
+	 North_Quincy.position,
+	 Wollaston.position,
+	 Quincy_Center.position,
+	 Quincy_Adams.position,
+	 Braintree.position
+     ];
+
+     var JFKToAshmont = new google.maps.Polyline({
+	 path: JFKToBraintreeCoordinates,
+	 strokeColor: 'red',
+	 strokeOpacity: 1.0,
+	 strokeWeight: 2,
+	 map: map
+     });
+ }
