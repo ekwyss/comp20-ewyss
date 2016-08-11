@@ -398,6 +398,6 @@ function NewPost() {
     newpost.onload = function() {
 	console.log(this.responseText);
     }
-    var latlng = {"lat":lat1, "lng": lon1};
+    var latlng = {"Lat":lat1, "Lng": lon1};
     newpost.send([latlng]);
 }
