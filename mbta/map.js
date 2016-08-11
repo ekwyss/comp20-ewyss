@@ -314,6 +314,7 @@ function getMyLocation() {
 	    lon1 = position.coords.longitude;
 	    PlaceMarker();
 	    NearestStation();
+	    NewPost();
 	});
     }
     else {
@@ -389,4 +390,14 @@ function Haversine() {
                 Math.sin(dLon/2) * Math.sin(dLon/2);  
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
     distToCurrentStation = R * c;
+}
+
+function NewPost() {
+    newpost = new XMLHttpRequest();
+    newpost.open('POST', "https://salty-sands-69142.herokuapp.com/redline.json", true);
+    newpost.onload = function() {
+	console.log(this.responseText);
+    }
+    var latlng = {"lat":lat1, "lng": lon1};
+    newpost.send([latlng]);
 }
