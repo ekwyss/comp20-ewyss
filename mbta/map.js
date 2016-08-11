@@ -275,7 +275,7 @@ function init()
     infowindow = new google.maps.InfoWindow();
 
     request = new XMLHttpRequest();
-    request.open("GET", "https://powerful-depths-66091.herokuapp.com/redline.json", true);
+    request.open("GET", "https://salty-sands-69142.herokuapp.com/redline.json", true);
     request.onreadystatechange = callme;
     request.send(null);
 
