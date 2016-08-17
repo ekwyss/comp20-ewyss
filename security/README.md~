@@ -1,0 +1,35 @@
+1.
+Cross site scripting vulnerability
+POST /sendLocation
+High: XSS allows attackers embed scripts in a page that can steal user info,
+      hijack user sessions, display unwanted content, etc.
+User input is not properly escaped so javascript tags can be included to insert
+malicious scripts.
+(Screenshots of popup and image)
+all user input should be properly escaped to separate untrusted data from active
+browser content, special characters should be HTML entity encoded to protect
+from attackers swapping into any execution context.
+2.
+Injection
+GET /checkins.json
+High: Through injection attackers can gain access to every users information.
+Using the URL  http://localhost:3000/checkins.json?login[$ne]=1 returns all
+   users information. In this particular instance we can only see data that
+   isn't particularly important but if things such as passwords or bank account
+   numbers were stored this would be a very urgent issue.
+The GET route /checkins.json does not separate untrusted data(user input) from
+the query.
+(screen of all users info)
+Instead of using dynamic queries use parameterized queries with variable binding
+so strings such as "'or '1'='1" or "[$ne]=1" wouldn't work to return all users
+info.
+3.
+Cross site scripting vulnerability
+Get /
+High: Allows embedded javascript from POST /sendLocation to be run on the page
+The line indexPage += "<li>" + results[count].login + ..." allows the code to
+    be executed. Through this route an attacker can redirect an unsuspecting
+    user to a phishing site and steal their credentials.
+(screenshot) going to the site results in this
+Same solution as XSS issue through post route, make sure the login data is
+properly escaped.
